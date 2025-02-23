@@ -21,24 +21,28 @@ def mostrar_produtos():
             contador += 1
   
 
-def selecionar_menu (opcao): # arrumar o codigo pag controle 
+def selecionar_menu (opcao): 
     if (opcao =='1'):
         mostrar_produtos()
         adicionar_produto = input ('Nome do produto, valor, qtde: ')
         banco_dados.append(adicionar_produto)
-        print (f"{Fore.BLUE} Informações adicionadas")        
+        print (f"{Fore.BLUE} Informações adicionadas")   
+        pausar()     
   
     elif (opcao =='2'):
        mostrar_produtos()
        numero_pruduto = int(input("Digite o número do produto para editar: "))
        atualizaçao_pruduto = input("Atualize as informações do produto: ")
        banco_dados [numero_pruduto - 1 ] = atualizaçao_pruduto
+       print ("Atualização salva com sucesso")
+       pausar()
 
     elif (opcao =='3'):
-        mostrar_produtos() #exluir 
+        mostrar_produtos() 
         numero_pruduto = int(input ("Digite o número do produto para excluão: "))
         del banco_dados [numero_pruduto - 1]
         print (f"{Fore.RED} Produto exluído") 
+        pausar()
         
 
     elif (opcao =='4'): #estoque
