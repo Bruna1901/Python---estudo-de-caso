@@ -1,4 +1,4 @@
-# Python - estudo de caso
+# Python - Estudo de caso
  Estudo de Caso -
  
 1. TÍTULO:
